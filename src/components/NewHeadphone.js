@@ -2,10 +2,15 @@ import React from 'react'
 
 class NewHeadphone extends React.Component {
 
+  newHeadphone(evt) {
+    evt.preventDefault()
+    console.log('in the function')
+  }
+
   render() {
     return (
       <div className='newHeadphone'>
-        <form>
+        <form onSubmit={this.newHeadphone.bind(this)}>
           <h2>Add headphones:</h2>
           <div>
             <input type='text' ref='brand' placeholder='brand'></input>
@@ -23,7 +28,7 @@ class NewHeadphone extends React.Component {
       </div>
     )
   }
-  
+
 }
 
 export default NewHeadphone
