@@ -22,3 +22,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+a {
+  text-decoration: none;
+  padding-left: 10px;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
