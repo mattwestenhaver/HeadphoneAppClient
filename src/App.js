@@ -8,6 +8,7 @@ import Headphones from './components/Headphones.js'
 import NewHeadphone from './components/NewHeadphone.js'
 
 class App extends Component {
+
   render() {
     return (
       <Router>
@@ -25,6 +26,7 @@ class App extends Component {
       </Router>
     );
   }
+
 }
 
 export default App;
