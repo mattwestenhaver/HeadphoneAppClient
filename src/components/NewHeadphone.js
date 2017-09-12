@@ -1,10 +1,23 @@
 import React from 'react'
+import axios from 'axios'
 
 class NewHeadphone extends React.Component {
 
   newHeadphone(evt) {
     evt.preventDefault()
     console.log('in the function')
+    const formData = {
+      brand: this.refs.brand,
+      model: this.refs.model,
+      price: this.refs.price
+    }
+    axios({
+      method: "POST",
+      url: 'http://localhost:3001/headphones',
+      data: formData
+    }).then((response) => {
+      console.log(response)
+    })
   }
 
   render() {
